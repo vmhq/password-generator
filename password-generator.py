@@ -1,6 +1,7 @@
 '''Password Generator'''
 
 import secrets
+import os
 
 
 def generate_password(length, use_uppercase=True, use_numbers=True, use_symbols=True):
@@ -21,6 +22,10 @@ def generate_password(length, use_uppercase=True, use_numbers=True, use_symbols=
     return password
 
 
+def clean_screen():
+    os.system('clear') if os.name == 'posix' else os.system('cls') #Limpia la pantalla 
+
+
 def user_pass():
     while True:
         try:
@@ -29,6 +34,7 @@ def user_pass():
                 raise ValueError
             break
         except ValueError:
+            clean_screen()
             print("Please enter a positive integer.")
 
     use_uppercase = input("Do you want to include uppercase letters? (y/n): ").lower() == 'y'
@@ -36,6 +42,7 @@ def user_pass():
     use_symbols = input("Do you want to include symbols? (y/n): ").lower() == 'y'
 
     password = generate_password(length, use_uppercase, use_numbers, use_symbols)
+    clean_screen()
     print("Your new password is:", password)
 
 
