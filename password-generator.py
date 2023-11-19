@@ -1,24 +1,27 @@
 import random
 
-def generar_contrasena(longitud, usar_mayusculas=True, usar_numeros=True, usar_simbolos=True):
-    letras_minusculas = 'abcdefghijklmnopqrstuvwxyz'
-    letras_mayusculas = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' if usar_mayusculas else ''
-    numeros = '0123456789' if usar_numeros else ''
-    simbolos = '!@#$%^&*()-_=' if usar_simbolos else ''
-    
-    # Combinando todos los caracteres posibles
-    caracteres_posibles = letras_minusculas + letras_mayusculas + numeros + simbolos
 
-    # Generando la contraseña
-    contrasena = ''.join(random.choice(caracteres_posibles) for i in range(longitud))
+def generate_password(length, use_uppercase=True, use_numbers=True, use_symbols=True):
+    lowercase_letters = 'abcdefghijklmnopqrstuvwxyz'
+    uppercase_letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' if use_uppercase else ''
+    numbers = '0123456789' if use_numbers else ''
+    symbols = '!@#$%^&*()-_=' if use_symbols else ''
     
-    return contrasena
+    # Combining all possible characters
+    possible_characters = lowercase_letters + uppercase_letters + numbers + symbols
 
-# Interacción con el usuario
+    # Generating the password
+    password = ''.join(random.choice(possible_characters) for i in range(length))
+    
+    return password
+
+
+# User interaction
 def main():
-    longitud = int(input("Longitud de la contraseña: "))
-    contrasena = generar_contrasena(longitud)
-    print("Tu nueva contraseña es:", contrasena)
+    length = int(input("Password length: "))
+    password = generate_password(length)
+    print("Your new password is:", password)
+
 
 if __name__ == "__main__":
     main()
