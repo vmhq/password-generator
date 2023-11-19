@@ -1,7 +1,7 @@
 
 # Generador de Contraseñas en Python 🐍🔐
 
-Este proyecto es un simple pero efectivo generador de contraseñas en Python. Puede generar contraseñas seguras y aleatorias, personalizables según tus necesidades.
+Este proyecto es un simple, pero efectivo generador de contraseñas en Python. Puede generar contraseñas seguras y aleatorias, personalizables según tus necesidades.
 
 ## Funcionalidades 🌟
 
