@@ -1,51 +1,59 @@
+# 🔒 Password Generator
 
-# Generador de Contraseñas en Python 🐍🔐
+This Python script provides a robust solution for generating secure and customizable passwords. By leveraging the `secrets` module, it ensures a high degree of randomness, crucial for creating strong passwords.
 
-Este proyecto es un simple, pero efectivo generador de contraseñas en Python. Puede generar contraseñas seguras y aleatorias, personalizables según tus necesidades.
+## 🌟 Features
 
-## Funcionalidades 🌟
+- **Customizable Length**: Choose the length of your password.
+- **Optional Character Sets**:
+  - Uppercase Letters (excluding 'I' and 'O' for clarity)
+  - Numbers (excluding '0' and '1' for clarity)
+  - Symbols
+- **Exclusions for Better Clarity**: Certain characters like 'l', 'I', 'O', '0', and '1' are excluded to avoid confusion.
 
-- **Generación de Contraseñas Aleatorias**: Crea contraseñas que combinan letras, números y símbolos.
-- **Personalización**: Elige la longitud de la contraseña y qué tipos de caracteres incluir.
+## 🚀 Getting Started
 
-## Cómo Funciona 🤖
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/vmhq/password-generator.git
+   ```
+2. **Run the script**:
+   ```bash
+   python password_generator.py
+   ```
 
-El programa consta de varias partes:
+## 📝 How to Use
 
-1. **Importación de la Biblioteca Random**: Usamos `random` para generar caracteres aleatorios.
-2. **Definición de Caracteres**: Establecemos cadenas de caracteres que se pueden usar en la contraseña, incluyendo letras mayúsculas, minúsculas, números y símbolos.
-3. **Función Generar Contraseña**: Se crea una función que selecciona aleatoriamente caracteres de las cadenas definidas para formar la contraseña.
-4. **Interacción con el Usuario**: El usuario puede especificar la longitud de la contraseña y qué tipos de caracteres incluir.
+When you run the script, it will prompt you for:
 
-### Ejemplo de Código
+- **Password Length**: Enter a positive integer.
+- **Character Inclusions**:
+  - Uppercase letters (Y/n)
+  - Numbers (Y/n)
+  - Symbols (Y/n)
 
-```python
-import random
+After providing the input, the script will generate and display a secure password.
 
-def generar_contrasena(longitud, usar_mayusculas=True, usar_numeros=True, usar_simbolos=True):
-    # ... (definición de la función)
-    return contrasena
+## 💡 Example
 
-# Código para interacción con el usuario
-longitud = int(input("Longitud de la contraseña: "))
-contrasena = generar_contrasena(longitud)
-print("Tu nueva contraseña es:", contrasena)
+```
+Password length: 10
+Do you want to include uppercase letters? (y/n): y
+Do you want to include numbers? (y/n): y
+Do you want to include symbols? (y/n): n
+Your new password is: eG7kq2s8Af
 ```
 
-## Cómo Empezar 🚀
+## 🛠️ Built With
 
-1. Clona este repositorio o descarga el archivo `.py`.
-2. Ejecuta el programa en tu entorno de Python.
-3. Sigue las instrucciones en pantalla para generar tu contraseña.
+- Python
+- `secrets` module for secure random generation
 
-## Contribuciones 🤝
+## ✨ Contributing
 
-Las contribuciones son bienvenidas. Si tienes alguna sugerencia o mejora, siéntete libre de hacer un 'pull request' o abrir un 'issue'.
+Contributions, issues, and feature requests are welcome! Feel free to check [issues page](https://github.com/vmhq/password-generator/issues).
 
-## Licencia 📄
+## 📄 License
 
-Este proyecto está bajo la Licencia MIT. Consulta el archivo `LICENSE` para más detalles.
-
----
-Creado con ❤️ y Python.
+Distributed under the MIT License. See `LICENSE` for more information.
 
