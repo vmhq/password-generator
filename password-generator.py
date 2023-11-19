@@ -23,8 +23,8 @@ def generate_password(length, use_uppercase=True, use_numbers=True, use_symbols=
 
 
 def clean_screen():
-    os.system('clear') if os.name == 'posix' else os.system('cls') #Limpia la pantalla 
-
+    os.system('clear') if os.name == 'posix' else os.system('cls') 
+    
 
 def user_pass():
     while True:
