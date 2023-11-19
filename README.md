@@ -1,4 +1,4 @@
-# 🔒 Password Generator
+# 🔐 Password Generator 🐍
 
 This Python script provides a robust solution for generating secure and customizable passwords. By leveraging the `secrets` module, it ensures a high degree of randomness, crucial for creating strong passwords.
 
