@@ -15,9 +15,10 @@ def generar_contrasena(longitud, usar_mayusculas=True, usar_numeros=True, usar_s
     return contrasena
 
 # Interacción con el usuario
-longitud = int(input("Longitud de la contraseña: "))
-contrasena = generar_contrasena(longitud)
-print("Tu nueva contraseña es:", contrasena)
+def main():
+    longitud = int(input("Longitud de la contraseña: "))
+    contrasena = generar_contrasena(longitud)
+    print("Tu nueva contraseña es:", contrasena)
 
 if __name__ == "__main__":
     main()
