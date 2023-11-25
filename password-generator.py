@@ -5,11 +5,11 @@ import os
 
 
 def generate_password(length, use_uppercase=True, use_numbers=True, use_symbols=True):
+    """Password Generator"""
     lowercase_letters = 'abcdefghijkmnopqrstuvwxyz'  # excluding 'l'
     uppercase_letters = 'ABCDEFGHJKLMNPQRSTUVWXYZ'  # excluding 'I' and 'O'
     numbers = '23456789'  # excluding '0' and '1'
     symbols = '!@#$%^&*()-_='
-    
     possible_characters = lowercase_letters
     if use_uppercase:
         possible_characters += uppercase_letters
@@ -23,10 +23,12 @@ def generate_password(length, use_uppercase=True, use_numbers=True, use_symbols=
 
 
 def clean_screen():
+    """Clean Screen"""
     os.system('clear') if os.name == 'posix' else os.system('cls') 
     
 
 def user_pass():
+    """User Interaction"""
     while True:
         try:
             length = int(input("Password length: "))
@@ -47,6 +49,7 @@ def user_pass():
 
 
 def main():
+    """Main"""
     user_pass()
 
 if __name__ == "__main__":
